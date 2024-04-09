@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+h1, h2 {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -11,14 +25,14 @@ img {
 
 /* Page styling */
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: #0245AD;
+    color: white;
     transition: all 2s;
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color: white;
+    color: black;
 }
 
 #container {
@@ -36,6 +50,8 @@ header {
 }
 
 #banner {
+    border: 2px white solid;
+    border-radius: 5px;
     position: relative;
     display: flex;
     width: 1100px;
@@ -49,8 +65,8 @@ header {
 }
 
 #banner.switch {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    content: url("images/Banner_2.png");
+    border-color: black;
     transition: all 2s;
 }
 
@@ -61,10 +77,16 @@ main {
 }
 
 main section {
+    background-color: white;
+    border-radius: 5px;
     flex: 1;
-    border: 1px rgb(235, 235, 235) dashed;
+    border: 2px white solid;
     margin: 0 .25em;
     padding: 1em;
+}
+
+section.switch {
+    background-color: #001C47;
 }
 
 a {
@@ -82,47 +104,63 @@ section li {
 }
 
 section a {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: orange;
+    color: #0245AD;
 }
 
 section a:hover {
-    background-color: orange;
-    color: #333;
+    border-radius: 2px;
+    background-color: #0245AD;
+    color: white;
 }
 
 section.switch a {
-    color: #333;
+    color: white;
 }
 
 section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: white;
+    color: #001C47;
+}
+
+section.switch h3 {
+    color: white;
 }
 
 button {
+    border-radius: 4px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
+    background-color: white;
     color: #333;
     border: 1px solid transparent;
 }
 
 button:hover {
-    background-color: coral;
+    background-color: #0245AD;
+    border-color: white;
+    color: white;
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background-color: white;
+    border-color: #001C47;
 }
 
 button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    background-color: #001C47;
+    color: white;
 }
