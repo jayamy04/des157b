@@ -1,0 +1,28 @@
+/* 1. two screen, first half Seattle, other half UC Davis */
+/* https://stackoverflow.com/questions/22321466/html-css-image-taking-half-of-the-screen */
+/* #leftHalf {
+    background: url(bg-1.jpg);
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+ }
+ 
+ #rightHalf {
+ 
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+ } */
+
+ #Seattle_Video {
+    background: url(media/Seattle.MP4);
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+ }
+ 
+
+
