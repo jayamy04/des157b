@@ -1,48 +1,73 @@
-// 2. implement text when hover and disappear when mouse out
-// 3. not hovering, video opacity is 50% and it is 100% when hovered
-// CSS 
-// body{
-//     background-color: #D65076;
-//   }
-  
-//   .parent, .cover{
-//     height: 100px;
-//     width: 100px;
-//     background-color: #FF6F61;
-//   }
-  
-//   .parent{
-//     position: relative;
-//   }
-  
-//   .cover{
-//     opacity: 0;
-//     position: absolute;
-//     top: 0;
-//   }
-  
-//   .cover:hover{
-//     opacity: 100;
-//   }
+(function() {
+  'use strict';
 
-// HTML
-{/* <div class="parent">
-  Some text would go in here
-  <div class="cover"> 
-    The hover text would go here
-  </div>
-</div> */}
-// https://stackoverflow.com/questions/72467423/how-to-make-a-text-appear-on-hover-and-another-disappear-using-css
+  const videoContainers = document.querySelectorAll('.split');
 
-// 4. implement play video when hover and pause when mouseout
-// $(document).ready(function() {
-//     $(".myvideos").on("mouseover", function(event) {
-//       this.play();
-  
-//     }).on('mouseout', function(event) {
-//       this.pause();
-  
-//     });
-//   })
-// https://stackoverflow.com/questions/47381793/html-js-how-to-play-stop-video-on-hover
+  videoContainers.forEach(container => {
 
+    const video = container.querySelector('video');
+    const icon = container.querySelector('i');
+    const text = container.querySelector('p');
+    const audio = container.querySelector('audio');
+    // asked chatgpt how to incorporate lyrics based on music being played
+    const songLyrics = [
+      { time: 3, text: "Hello Seattle, I am a mountaineer" },
+      { time: 8.5, text: "In the hills and highlands" },
+      { time: 11.5, text: "I fall asleep in hospital parking lots" },
+      { time: 17, text: "And awake in your mouth" }
+  ];
+    const lyricsContainer = document.getElementById('lyricsContainer');
+    const currentLyric = document.getElementById('currentLyric');
+
+    container.addEventListener('mouseover', function() {
+      video.play();
+      icon.style.visibility = 'visible';
+      text.style.visibility = 'visible';
+      video.style.opacity = '100%';
+    });
+
+    // Pause video when the container is hovered out
+    container.addEventListener('mouseout', function() {
+      video.pause();
+      icon.style.visibility = 'hidden'; 
+      text.style.visibility = 'hidden';
+      video.style.opacity = '40%';
+    });    
+
+    icon.addEventListener('click', function() {
+      if (container.classList.contains('fullscreen')) {
+        // Exit full-screen mode
+        container.classList.remove('fullscreen');
+        container.style.width = '50vw'; // Set container width back to half-screen
+        text.style.fontSize = '25px';
+        text.style.color = 'gray';
+        text.style.top = '30px';
+        audio.pause();
+      } else {
+        // Enter full-screen mode
+        container.classList.add('fullscreen');
+        container.style.width = '100vw'; // Set container width to full-screen
+        text.style.fontSize = '100px';
+        text.style.color = 'white';
+        text.style.top = '400px';
+        audio.play();
+      }
+    });
+
+    let lyricIndex = 0;
+    audio.addEventListener('timeupdate', () => {
+      const currentTime = audio.currentTime;
+      if (lyricIndex < songLyrics.length && currentTime >= songLyrics[lyricIndex].time) {
+        text.textContent = songLyrics[lyricIndex].text; // Display current lyric line
+        lyricIndex++; // Move to the next lyric line
+      }
+    });
+
+    // Event listener for resetting lyrics when audio playback ends
+    audio.addEventListener('ended', () => {
+      text.textContent = ''; // Clear displayed lyric
+      lyricIndex = 0; // Reset lyric index
+    });
+  });
+
+})();

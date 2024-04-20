@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Script -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Javascript Script -->
+    <script src="script.js" defer></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Seattle & UC Davis Scenery Videos</title>
 </head>
 <body>
-    <div id="Seattle_Video">
-        <video width="50%" muted autoplay loop playsinline>
+    <!-- https://www.w3schools.com/howto/howto_css_split_screen.asp -->
+    <div class="split left">
+        <p>Seattle, Washington</p>
+        <video muted loop playsinline>
             <!-- <source src="media/IMG_9424 2.webm" type="video/webm"> -->
             <source src="media/Seattle.MP4" type="video/mp4">
         
-            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/IMG_9424.mp4">link to the video</a>instead.</p>
+            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/Seattle.MP4">link to the video</a>instead.</p>
         </video>
+        <div id="lyricsContainer">
+            <p id="currentLyric"></p>
+        </div>
+        <i class="fa-solid fa-maximize" hidden></i>
+        <audio src="media/Hello_Seattle.mp3" controls autoplay></audio>
+    </div>
+
+    <div class="split right">
+        <p>UC Davis, Davis</p>
+        <video muted loop playsinline>
+            <!-- <source src="media/IMG_9424 2.webm" type="video/webm"> -->
+            <source src="media/UC_Davis.MOV" type="video/mp4">
+        
+            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/UC_Davis.mp4">link to the video</a>instead.</p>
+        </video>
+        <i class="fa-solid fa-maximize" hidden></i>
     </div>
 </body>
 </html>
