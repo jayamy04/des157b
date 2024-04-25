@@ -1,4 +1,4 @@
-body {
+head {
    margin: 0;  
    padding: 0;
 }
@@ -15,10 +15,6 @@ p {
    /* Ensure visibility of the text */
    visibility: hidden;
    z-index: 2; /* Place text above the video */
-}
-
-audio {
-   
 }
 
 .split {
