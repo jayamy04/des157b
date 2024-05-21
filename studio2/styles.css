@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00C3C3;
+    text-align: center;
+}
+
+h1 {
+    font-size: 99px;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+p {
+    font-size: 45px;
+}
+
+#moods {
+    padding: 20px 0;
+    font-size: 90px;
+    color: brown;
+}
