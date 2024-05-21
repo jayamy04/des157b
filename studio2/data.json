@@ -1,0 +1,104 @@
+{
+    "point1" : {
+        "time" : "3:00",
+        "mood" : 1,
+        "location" : "Bedroom",
+        "company" : "No one"
+    },
+    "point2" : {
+        "time" : "3:15",
+        "mood" : 3,
+        "location" : "Bathroom",
+        "company" : "No one"
+    },
+    "point3" : {
+        "time" : "3:30",
+        "mood" : 5,
+        "location" : "Balcony",
+        "company" : "Roomate"
+    },
+    "point4" : {
+        "time" : "3:45",
+        "mood" : 7,
+        "location" : "Kitchen",
+        "company" : "Roomate"
+    },
+    "point5" : {
+        "time" : "4:00",
+        "mood" : 9,
+        "location" : "Kitchen",
+        "company" : "Roomate"
+    },
+    "point6" : {
+        "time" : "4:15",
+        "mood" : 10,
+        "location" : "Kitchen",
+        "company" : "Roomate"
+    },
+    "point7" : {
+        "time" : "4:30",
+        "mood" : 8,
+        "location" : "Living Room",
+        "company" : "Roomate"
+    },
+    "point8" : {
+        "time" : "4:45",
+        "mood" : 5,
+        "location" : "Bedroom",
+        "company" : "No one"
+    },
+    "point9" : {
+        "time" : "5:00",
+        "mood" : 5,
+        "location" : "Bathroom",
+        "company" : "No one"
+    },
+    "point10" : {
+        "time" : "5:15",
+        "mood" : 5,
+        "location" : "Outside",
+        "company" : "No one"
+    },
+    "point11" : {
+        "time" : "5:30",
+        "mood" : 5,
+        "location" : "Study Room",
+        "company" : "Friend"
+    },
+    "point12" : {
+        "time" : "5:45",
+        "mood" : 6,
+        "location" : "Study Room",
+        "company" : "Friend"
+    },
+    "point13" : {
+        "time" : "6:00",
+        "mood" : 8,
+        "location" : "Study Room",
+        "company" : "Friend"
+    },
+    "point14" : {
+        "time" : "6:15",
+        "mood" : 8,
+        "reason" : "Study Room",
+        "company" : "Friend"
+    },
+    "point15" : {
+        "time" : "6:30",
+        "mood" : 8,
+        "location" : "Study Room",
+        "company" : "Friend"
+    },
+    "point16" : {
+        "time" : "6:45",
+        "mood" : 8,
+        "location" : "Study Room",
+        "company" : "Friend"
+    },
+    "point17" : {
+        "time" : "7:00",
+        "mood" : 10,
+        "location" : "Study Room",
+        "company" : "Friend"
+    }
+}
