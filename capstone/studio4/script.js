@@ -1,20 +1,35 @@
 (function() { 
     'use strict';
-    // ChatGPT Helped A Little!
-    const graphSection = document.querySelector('.graph-section');
+
+    const lineSection = document.querySelector('.northern_graph');
+    const pieSection = document.getElementById('myChart');
+    // const pieSection = document.querySelector('.pie-section');
+    const pieBox = document.getElementById('pie-chart');
     const middleOfViewport = window.innerHeight / 2;
-  
+
     window.addEventListener('scroll', () => {
-        const graphTop = graphSection.getBoundingClientRect().top;
+        const graphTop = lineSection.getBoundingClientRect().top;
+        const pieBoxTop = pieBox.getBoundingClientRect().top;
         
-        if (graphTop <= middleOfViewport) {
-            graphSection.classList.add('fixed-graph');
-        } else {
-            graphSection.classList.remove('fixed-graph');
-        }
+        if (graphTop <= middleOfViewport && pieBoxTop > middleOfViewport) {
+            lineSection.classList.add('fixed-graph');
+            pieSection.classList.add('fixed-graph');
+            lineSection.classList.remove('hidden');
+            pieSection.classList.add('hidden');
+        } 
+        else if (pieBoxTop <= middleOfViewport) {
+            lineSection.classList.remove('fixed-graph');
+            // lineSection.classList.add('hidden');
+            pieSection.classList.remove('hidden');
+        } 
+        else {
+            lineSection.classList.remove('fixed-graph');
+            // lineSection.classList.add('hidden');
+            // pieSection.classList.add('hidden');
+        } 
     });
-  
-  })();
+})();
+
 
 // You can also pass an optional settings object
 // below listed default settings

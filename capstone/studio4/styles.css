@@ -21,8 +21,7 @@ header h2 {
 }
 
 .button {
-    /* https://www.w3schools.com/css/css3_buttons.asp */
-    background-color: #303030; /* Green */
+    background-color: #303030; 
     border: 1px solid white;
     color: white;
     padding: 15px 32px;
@@ -55,18 +54,17 @@ img {
 }
 
 .content {
-    /* ChatGPT */
     height: 8000px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
-.graph-section {
+.graph-section, .pie-section {
     top: 0;
     left: 0;
-    width: 100%; /* Set explicit width */
-    height: 200px; /* Set explicit height */
+    width: 100%;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,6 +77,14 @@ img {
     width: 100%; 
 }
 
+/* #myChart {
+    opacity: 0;
+} */
+
+.hidden {
+    opacity:0;
+}
+
 .cards {
     height: 200vh;
     display: flex;
@@ -86,7 +92,7 @@ img {
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 350;
@@ -97,29 +103,9 @@ img {
     padding: 0px 25px;
     border: 1px solid #e3e3e3;
     height: 300px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     color: #303030;
 }
-
-/* .card.show {
-    opacity: 1;
-    transform: translateY(0);
-} */
-
-/* section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-} */
-
-/* .box {
-    margin: 50px 0;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    text-align: center;
-} */
