@@ -3,7 +3,6 @@
 
     const lineSection = document.querySelector('.northern_graph');
     const pieSection = document.getElementById('myChart');
-    // const pieSection = document.querySelector('.pie-section');
     const pieBox = document.getElementById('pie-chart');
     const middleOfViewport = window.innerHeight / 2;
 
