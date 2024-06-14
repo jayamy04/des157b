@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Mini Studio 3: Library Liberty</title>
+    <!-- Library 1: Animate on Scroll -->
+    <!-- YouTube Video Referenced: https://www.youtube.com/watch?v=YTL0vrcvsOY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link Javascript -->
+    <script defer src="scripts.js"></script>
+    <!-- Library 2: Chart.js -->
+    <!-- YouTube Video Referenced: https://www.youtube.com/watch?v=yD3kXXJTqsc-->
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <header>
+        <h1 data-aos="flip-down" data-aos-delay="500" data-aos-duration="1000">Sudden Rise in Temperature of the Northern Atlantic Ocean</h1>
+    </header>
+    <div class="pie-container">
+        <div style="width:600px; height:400px;">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <div class="pie">
+      <script>
+
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'pie', 
+          data: {
+            labels: ['Deaths in: 1987-2000', 'Deaths in: 2024', 'Deaths in: Future (2030)'],
+            datasets: [{
+            label: 'My First Dataset',
+            data: [36444, 400000, 700000],
+            backgroundColor: [
+            '#5C2DFD',
+            '#FCA21A',
+            '#EF562B',
+            ],
+            hoverOffset: 4
+            },
+            ]
+          },
+        //   type: 'line',
+        //   data: {
+        //     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        //     datasets: [{
+        //       label: 'lbs lost by Vince',
+        //       data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+        //       borderColor: 'rgb(255, 0, 0)',
+        //     },
+        //     {
+        //       label: 'lbs lost by John',
+        //       data: [20, 19, 12, 5, 2, 3, 1, 0, 3, 1, -5, 3],
+        //       borderColor: 'rgb(0,255, 0)',
+        //     }]
+        //   },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      </div>
+    <div class="cards">
+        <div class="card" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
+            Did you know the temperature of the Northern Atlantic Ocean rose suddenly due to climate change in 2022 and 2023?
+        </div>
+        <div class="card" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+            Let's look at this graph. In the next 10-20 years, there will be lots of marine extinction and human deaths. 
+        </div>
+        <div class="card" data-aos="slide-left" data-aos-delay="100" data-aos-duration="1000">
+            How can we prevent this? We can stop putting new carbon dioxide into the atmosphere and taking the old CO2 out of the atmosphere.
+        </div>
+        <!-- <div class="card" data-aos="slide-right" data-aos-delay="100" data-aos-duration="1000">
+            Card5
+        </div>
+        <div class="card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+            Card6
+        </div> -->
+    </div>
+</body>
+</html>

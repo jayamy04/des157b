@@ -60,16 +60,6 @@ img {
     flex-direction: column;
 }
 
-.graph-section, .pie-section {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .fixed-graph {
     position: fixed;
     top: 50%;
