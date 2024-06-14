@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Capstone Project</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <header>
+        <h1 data-aos="flip-down" data-aos-delay="100" data-aos-duration="1000">Sudden Rise in Temperature of the Northern Atlantic Ocean</h1>
+        <h2 data-aos="flip-down" data-aos-delay="100" data-aos-duration="1000">By Amy Lee</h2>
+        <h2 class="button" data-aos="flip-down" data-aos-delay="100" data-aos-duration="1000">Scroll to Learn More</h2>
+        <div class="arrow-down"><i class="fa-solid fa-arrow-down"></i></div>
+    </header>
+    
+    <div class="graph-section">
+        <img class="northern_graph" src="images/Northern_Graph.png" alt="Northern Atlantic Ocean Rising Temperature Graph">
+    </div>
+
+    <div class="pie-container">
+      <div style="width:600px; height:400px;">
+          <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="pie">
+    <script>
+    
+      const ctx = document.getElementById('myChart');
+    
+      new Chart(ctx, {
+        type: 'pie', 
+        data: {
+          labels: ['Deaths in: 1987-2000', 'Deaths in: 2024', 'Deaths in: Future (2030)'],
+          datasets: [{
+          label: 'My First Dataset',
+          data: [36444, 400000, 700000],
+          backgroundColor: [
+          '#5C2DFD',
+          '#FCA21A',
+          '#EF562B',
+          ],
+          hoverOffset: 4
+          },
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+    </div>
+
+    <div class="content">
+        <div class="cards">
+            <div class="card" data-aos="fade-up">
+                Did you know the temperature of the Northern Atlantic Ocean rose suddenly due to climate change in 2022 and 2023?
+            </div>
+            <div class="card" data-aos="fade-up">
+                Let's look at this graph. The temperature in 2022 (in yellow) and 2023 (in red) are visibily higher than the previous years (in blue).
+            </div>
+            <div class="card" data-aos="fade-up">
+                In the next 10-20 years, there will be lots of marine extinction and human deaths. 
+            </div>
+            <div class="card" id="pie-chart" data-aos="fade-up">
+              Average Human Deaths in 1987-2000 was 36444, in 2024 was 400000, and in 2030 it is predicted to be 700000. Let's look at this pie chart and compare the numbers between now and just 6 years later. This is a rapid, unfortunate increase! The temperature will continue rising and so does the death rate.
+            </div>
+            <div class="card" data-aos="fade-up">
+                How can we prevent this? We can stop putting new carbon dioxide into the atmosphere and taking the old CO2 out of the atmosphere.
+            </div>
+            <div class="card" data-aos="fade-up">
+              THE END.
+          </div>
+        </div>
+    </div>
+</body>
+</html>
