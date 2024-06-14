@@ -28,6 +28,10 @@
             // pieSection.classList.add('hidden');
         } 
     });
+
+    window.onload = function() {
+        alert("You are worried about climate change and the rising temperature, especially the hot summer you are experiencing right now. You want to learn more about climate change so you are aware of how dangerous it is. Please read this page and do what it tells you to do.");
+    }
 })();
 
 
